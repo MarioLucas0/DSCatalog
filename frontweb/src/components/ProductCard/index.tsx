@@ -1,6 +1,6 @@
 import './styles.css'
 
-import ProductImg from '../../assets/img/product.png'
+import ProductImg from 'assets/img/product.png'
 import ProductPrice from '../ProductPrice'
 
 const ProductCard = () => {

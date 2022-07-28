@@ -26,17 +26,26 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="dscatalog-navbar">
           <ul className="navbar-nav offset-md-2 main-menu">
             <li>
-              <NavLink to="/" className="active">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
                 HOME
               </NavLink>
             </li>
             <li>
-              <NavLink to="/products" className="active">
+              <NavLink
+                to="/products"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
                 CATÁLOGO
               </NavLink>
             </li>
             <li>
-              <NavLink to="/admin" className="active">
+              <NavLink
+                to="/admin"
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
                 ADMIN
               </NavLink>
             </li>
