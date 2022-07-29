@@ -12,7 +12,7 @@ const ProductCard = ({ product }: Props) => {
   return (
     <div className="base-card product-card">
       <div className="card-top-container">
-        <Link to="/products-details">
+        <Link to="/products/productId">
           <img src={product.imgUrl} alt={product.name} />
         </Link>
       </div>

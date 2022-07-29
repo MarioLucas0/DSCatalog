@@ -1,6 +1,8 @@
 import ProductCard from '../../components/ProductCard/index'
 
 import { Product } from 'types/product'
+import './style.css'
+import Pagination from 'components/Pagination'
 
 const Catalog = () => {
   const product: Product = {
@@ -25,11 +27,18 @@ const Catalog = () => {
   }
 
   return (
-    <div className="container my-4">
+    <div className="container my-4 catalog-container">
+      <div className="row catalog-title-container">
+        <h1>Catalogo de Produtos</h1>
+      </div>
       <div className="row">
         <div className="col-sm-6 col-lg-4 col-xl-3">
           <ProductCard product={product} />
         </div>
+      </div>
+
+      <div className="row">
+        <Pagination />
       </div>
     </div>
   )

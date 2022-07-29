@@ -1,0 +1,12 @@
+.catalog-container {
+  font-size: 2.2rem;
+}
+.catalog-title-container {
+  margin-bottom: 2rem;
+}
+
+.catalog-title-container h1 {
+  font-size: 1.6em;
+  letter-spacing: -0.01em;
+  color: #263238;
+}
