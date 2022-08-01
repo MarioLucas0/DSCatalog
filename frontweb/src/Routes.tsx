@@ -13,12 +13,14 @@ const Rotas = () => (
       <Route path="/" element={<Home />} />
       <Route path="/products" element={<Catalog />} />
       <Route path="/products/:productId" element={<ProductDetails />} />
+
+      <Route
+        path="/admin"
+        element={<Navigate replace to="/admin/products" />}
+      ></Route>
+
       <Route path="/admin" element={<Admin />}>
-        <Route
-          path="/admin"
-          element={<Navigate replace to="/admin/products" />}
-        ></Route>
-        <Route path="/admin/products" element={<h1>Products Crud</h1>}></Route>
+        <Route path="/admin/products" element={<h1>products Crud</h1>}></Route>
         <Route path="/admin/category" element={<h1>Category Crud</h1>}></Route>
         <Route path="/admin/user"></Route>
       </Route>

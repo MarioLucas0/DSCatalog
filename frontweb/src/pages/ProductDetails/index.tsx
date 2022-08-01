@@ -2,18 +2,21 @@ import { ReactComponent as ArrowIcon } from 'assets/img/arrow.svg'
 import axios from 'axios'
 import ProductPrice from 'components/ProductPrice'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { Product } from 'types/product'
 import { BASE_URL } from 'util/request'
 import './style.css'
 
 const ProductDetails = () => {
+  const { productId } = useParams()
+
   const [product, setProduct] = useState<Product>()
 
   useEffect(() => {
-    axios.get(BASE_URL + '/products/3').then(response => {
+    axios.get(`${BASE_URL}/products/${productId}`).then(response => {
       setProduct(response.data)
     })
-  }, [])
+  }, [productId])
 
   return (
     <section className="product-container-details">
