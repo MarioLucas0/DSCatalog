@@ -2,23 +2,20 @@ import './styles.css'
 
 import ProductPrice from '../ProductPrice'
 import { Product } from 'types/product'
-import { Link } from 'react-router-dom'
 
 type Props = {
-  product: Product
+  products: Product
 }
 
-const ProductCard = ({ product }: Props) => {
+const ProductCard = ({ products }: Props) => {
   return (
     <div className="base-card product-card">
       <div className="card-top-container">
-        <Link to="/products/productId">
-          <img src={product.imgUrl} alt={product.name} />
-        </Link>
+        <img src={products.imgUrl} alt={products.name} />
       </div>
       <div className="card-bottom-container">
-        <h6>{product.name}</h6>
-        <ProductPrice price={product.price} />
+        <h6>{products.name}</h6>
+        <ProductPrice price={products.price} />
       </div>
     </div>
   )
