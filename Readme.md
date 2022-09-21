@@ -1,6 +1,6 @@
 # DS Catalog
 
-
+![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=PROJETO%20EM%20ANDAMENTO&color=GREEN&style=for-the-badge)
 
 # Sobre o projeto
 
